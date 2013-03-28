@@ -29,9 +29,12 @@ int main()
         cin >> gender;
         if (gender == "1") {
             cout << "You're a dude!" << endl;
+            gender = "female";
         }
         else if(gender == "2") {
-            cout << "You're a chick!" << endl;}
+            cout << "You're a chick!" << endl;
+            gender = "male";
+            }
 
         cout << "What a nice house, " << name << "." << endl;
         cout << "The dishes are piled in the sink. \nThe floor is covered in dog pee and poop. \n1You only have half an hour till work." << endl;
