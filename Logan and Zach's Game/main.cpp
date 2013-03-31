@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//Global Variables
 int input = 0;
 string name;
 string gender;
@@ -11,14 +12,11 @@ int playerLocation = 1;
 int minutes = 30;
 
 void menuFuncStat(){
-    while(input != 0){
-        system("cls");
-        cout << "PLAYER STATUS\n" << endl;
-        cout << "Name: " << name << endl;
-        cout << "Gender: " << gender << endl;
-        cout << "0. Exit" << endl;
-        cin >> input;
-    }
+    system("cls");
+    cout << "PLAYER STATUS\n" << endl;
+    cout << "Name: " << name << endl;
+    cout << "Gender: " << gender << endl;
+    system("pause");
     return;
 }
 void menuFunc(){
@@ -38,20 +36,21 @@ void menuFunc(){
     return;
 }
 void titleScreen(){
+    system("cls");
     string title ="LOGAN & ZACH'S AWESOME ADVENTURE";
     cout << title << endl;
     cout << "1. New Game" << endl;
     cout << "2. Continue" << endl;
     cout << "3. Quit" << endl;
     cin >> input;
-    system("cls");
     return;
 }
 void characterSetup(){
+    system("cls");
     cout << "Welcome, the Adventure begins." << endl;
     cout << "What is your name?" << endl;
-    cin.ignore();
-    getline(cin, name);
+    cin.ignore();// Pause before it skips
+    getline(cin, name); // Get the hole line
     system("cls");
     cout << name << ", woah." << endl;
     cout << "I can't remember, are you a boy or girl?" << endl;
@@ -59,18 +58,14 @@ void characterSetup(){
     cout << "2. Female" << endl;
     cin >> input;
     if (input == 1) {
-        system("cls");
         cout << "You're a dude!" << endl;
         gender = "Male";
     }
     else if(input == 2) {
-        system("cls");
         cout << "Dang, girl, you got it going on!" << endl;
         gender = "Female";
     }
-    cout << "Press ENTER to continue...";
-    cin.ignore();
-    system("cls");
+    system("pause");
     return;
 }
 void playGame(){
@@ -124,11 +119,15 @@ void playGame(){
                     cout << "Your late for your job. Your boss fires you.\n" << endl;
                     cout << "\t\t\t\tGAME OVER";
                     playerLocation = 0;
+                } else {
+                    cout << "You made it in time for work.";
                 }
                 while(playerLocation == 2){
                     system("cls");
+                    cout << "You are a dishwasher at Whispers." << endl;
                     switch(input){
-
+                        case 1:
+                            break;
                     }
                 }
                 break;
