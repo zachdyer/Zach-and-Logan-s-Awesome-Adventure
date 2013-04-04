@@ -125,6 +125,11 @@ void playGame(){
                 while(playerLocation == 2){
                     system("cls");
                     cout << "You are a dishwasher at Whispers." << endl;
+                    cout << "What do you want to do?" << endl;
+                    cout << "1. Wash dishes" << endl;
+                    cout << "2. Bus tables" << endl;
+                    cout << "3. " << endl;
+                    cin >> input;
                     switch(input){
                         case 1:
                             break;
